@@ -13,7 +13,7 @@ class CreateCheckoutSessionView(View):
     def post(self, request, *args, **kwargs):
         item_id = self.kwargs["pk"]
         items = Item.objects.get(id=item_id)
-        YOUR_DOMAIN = "http://127.0.0.1:8000"
+        YOUR_DOMAIN = "https://itemstore.pythonanywhere.com/"
         checkout_session = stripe.checkout.Session.create(
             payment_method_types=['card'],
             line_items=[
