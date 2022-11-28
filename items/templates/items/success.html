@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="{% static 'items/css/style1.css' %}">
+    <meta charset="UTF-8">
+    <title>Success</title>
+</head>
+<body>
+<div class="success-block">
+    <div class="success-block-1">
+        <h1 class="success">Success</h1>
+        <p class="text">Your payment was successful. <a class="url" href="{% url 'home' %}">Back to main menu</a></p>
+
+    </div>
+</div>
+</body>
+</html>

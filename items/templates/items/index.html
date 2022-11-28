@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link type="text/css" rel="stylesheet" href="{% static 'items/css/style1.css' %}">
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+<div class="items">
+{% for i in items %}
+    <div class="item">
+        <div class="name">{{ i.name }}</div>
+        <a href="{{ i.get_absolute_url }}"><button type="button" id="checkout-button">Buy</button></a>
+    </div>
+{% endfor %}
+</div>
+</body>
+</html>
